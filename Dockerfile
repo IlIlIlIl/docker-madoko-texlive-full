@@ -1,5 +1,4 @@
 FROM node:5.11.0
-
 RUN apt-get update && \
       apt-get -y dist-upgrade && \
       apt-get install -y \
