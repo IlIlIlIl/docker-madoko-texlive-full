@@ -11,3 +11,6 @@ RUN apt-get install -y \
       inotify-tools \
       xzdec
 RUN tlmgr init-usertree
+COPY add_user add_user
+RUN ./add_user
+USER developer
