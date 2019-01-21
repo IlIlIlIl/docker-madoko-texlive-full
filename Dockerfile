@@ -10,6 +10,9 @@ RUN npm install madoko -g
 RUN apt-get install -y \
       inotify-tools \
       xzdec
+RUN apt-get update
+RUN apt-get install -y --allow-unauthenticated fonts-noto ttf-mscorefonts-installer
+RUN fc-cache -f -v
 RUN tlmgr init-usertree
 COPY add_user add_user
 RUN ./add_user
